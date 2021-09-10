@@ -148,21 +148,13 @@
  * 
  */
 
-// function getArrayInterval(array, a, b){
-//     array.slice(a, b) => {
-//         if (index > a || index < b){}
-//     });
-// };
+function getArrayInterval(array, a, b){
+    return array.slice(a, b)
+}
 
 
 const listOfThings = ['cane', 'topo', 'ragno', 'scoiattolo', 'koala', 'rinoceronte', 'gabbiano', 'pellicano'];
-const selectionOfThings = listOfThings.forEach((element, index) => {
-    console.log (index);
-    console.log (element);
-    if (index > 2 ){
-        return element;
-    }
-});
+const selectionOfThings = getArrayInterval(listOfThings, 2, 8);
 // const gatto = listOfThings.slice(2, 6);
 
 console.log(selectionOfThings);
