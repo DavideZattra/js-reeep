@@ -133,10 +133,28 @@
 //     }
 // ];
 
-// function getRandomInt(min, max){
-//     return Math.floor(Math.random() * (max - min) + min);
+// function getRandomNumber(min, max){
+//     return Math.floor(Math.random() * max + min)
 // }
 
+
+
+// for (let i = 0; i < footballTeam.length; i++){
+//     footballTeam[i].points = getRandomNumber(1, 30);
+//     footballTeam[i].foulDone = getRandomNumber(0, 10);
+// }
+
+// console.table(footballTeam);
+
+// //Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+// const footballTeamFoul = [];
+
+// for(let i = 0; i < footballTeam.length; i++){
+    
+//     const { name, foulDone} = footballTeam[i];
+
+//     console.log(name +' '+ foulDone);
+// }
 
 /**
  * 
@@ -149,12 +167,23 @@
  */
 
 function getArrayInterval(array, a, b){
-    return array.slice(a, b)
-}
+    return array.filter((element, index) => {
+        return (index >= a && index <= b);
+    });
+
+};
+
+
 
 
 const listOfThings = ['cane', 'topo', 'ragno', 'scoiattolo', 'koala', 'rinoceronte', 'gabbiano', 'pellicano'];
-const selectionOfThings = getArrayInterval(listOfThings, 2, 8);
-// const gatto = listOfThings.slice(2, 6);
+console.log(getArrayInterval(listOfThings, 2, 6));
+// // const gatto = listOfThings.slice(2, 6);
+// console.log(selectionOfThings);
 
+const selectionOfThings = getArrayInterval(listOfThings, 2, 6);
 console.log(selectionOfThings);
+//     index
+// }
+// );
+
